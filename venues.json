@@ -1,0 +1,64 @@
+{
+    "venues": [
+        {
+            "name": "The Golden Fork",
+            "rating": 4,
+            "distance": 1.2,
+            "category": { "id": "4d4b7105d754a06374d81259", "name": "Restaurant", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_", "suffix": ".png" } }
+        },
+        {
+            "name": "Brew & Barrel",
+            "rating": 5,
+            "distance": 0.8,
+            "category": { "id": "4bf58dd8d48988d116941735", "name": "Bar", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_", "suffix": ".png" } }
+        },
+        {
+            "name": "Zen Spa & Wellness",
+            "rating": 4,
+            "distance": 3.5,
+            "category": { "id": "4bf58dd8d48988d1ed941735", "name": "Spa", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/spa_", "suffix": ".png" } }
+        },
+        {
+            "name": "The Book Nook",
+            "rating": 3,
+            "distance": 2.1,
+            "category": { "id": "4bf58dd8d48988d114951735", "name": "Bookstore", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/bookstore_", "suffix": ".png" } }
+        },
+        {
+            "name": "Urban Grind Coffee",
+            "rating": 5,
+            "distance": 0.4,
+            "category": { "id": "4bf58dd8d48988d1e0931735", "name": "Cafe", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_", "suffix": ".png" } }
+        },
+        {
+            "name": "FitZone Gym",
+            "rating": 4,
+            "distance": 1.9,
+            "category": { "id": "4bf58dd8d48988d175941735", "name": "Gym", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/gym_", "suffix": ".png" } }
+        },
+        {
+            "name": "Sakura Japanese Kitchen",
+            "rating": 5,
+            "distance": 2.7,
+            "category": { "id": "4d4b7105d754a06374d81259", "name": "Restaurant", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_", "suffix": ".png" } }
+        },
+        {
+            "name": "The Grand Cinema",
+            "rating": 3,
+            "distance": 4.3,
+            "category": { "id": "4bf58dd8d48988d17f941735", "name": "Cinema", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/arts_entertainment/movietheater_", "suffix": ".png" } }
+        },
+        {
+            "name": "Artisan Pizza Co.",
+            "rating": 4,
+            "distance": 1.1,
+            "category": { "id": "4d4b7105d754a06374d81259", "name": "Restaurant", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_", "suffix": ".png" } }
+        },
+        {
+            "name": "Nightowl Lounge",
+            "rating": 3,
+            "distance": 5.0,
+            "category": { "id": "4bf58dd8d48988d116941735", "name": "Bar", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_", "suffix": ".png" } }
+        }
+    ]
+}

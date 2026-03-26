@@ -1,0 +1,37 @@
+//
+//  VenuesStore.swift
+//  VenueFinder
+//
+//  Created by Andrei Zamfir on 13.03.2026.
+//
+
+import Observation
+
+@MainActor
+@Observable final class VenuesStore {
+    enum LoadState {
+        case idle
+        case loading
+        case loaded
+        case failed(String)
+    }
+
+    private(set) var venues: [Venue] = []
+    private(set) var loadState: LoadState = .idle
+
+    private let dataSource: VenueDataSource
+
+    init(dataSource: VenueDataSource) {
+        self.dataSource = dataSource
+    }
+
+    func load() async {
+        loadState = .loading
+        do {
+            venues = try await dataSource.fetchVenues()
+            loadState = .loaded
+        } catch {
+            loadState = .failed(error.localizedDescription)
+        }
+    }
+}

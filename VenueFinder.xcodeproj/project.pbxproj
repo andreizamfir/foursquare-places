@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		333309CF2F64684C0007B093 /* venues.json in Resources */ = {isa = PBXBuildFile; fileRef = 333309CE2F6468390007B093 /* venues.json */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		3333098A2F6461120007B093 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		3333097B2F6461100007B093 /* VenueFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenueFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		333309892F6461120007B093 /* VenueFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenueFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		333309932F6461120007B093 /* VenueFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenueFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		333309CE2F6468390007B093 /* venues.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = venues.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		333309722F6461100007B093 = {
 			isa = PBXGroup;
 			children = (
+				333309CE2F6468390007B093 /* venues.json */,
 				3333097D2F6461100007B093 /* VenueFinder */,
 				3333098C2F6461120007B093 /* VenueFinderTests */,
 				333309962F6461120007B093 /* VenueFinderUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				333309CF2F64684C0007B093 /* venues.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
