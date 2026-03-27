@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		333309CF2F64684C0007B093 /* venues.json in Resources */ = {isa = PBXBuildFile; fileRef = 333309CE2F6468390007B093 /* venues.json */; };
+		33AFEDA42F75883000C8B66B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AFED932F75883000C8B66B /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		333309892F6461120007B093 /* VenueFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenueFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		333309932F6461120007B093 /* VenueFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenueFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		333309CE2F6468390007B093 /* venues.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = venues.json; sourceTree = "<group>"; };
+		33AFED932F75883000C8B66B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				333309CE2F6468390007B093 /* venues.json */,
+				33AFED932F75883000C8B66B /* Model.swift */,
 				3333097D2F6461100007B093 /* VenueFinder */,
 				3333098C2F6461120007B093 /* VenueFinderTests */,
 				333309962F6461120007B093 /* VenueFinderUITests */,
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33AFEDA42F75883000C8B66B /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

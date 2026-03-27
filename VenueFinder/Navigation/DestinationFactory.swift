@@ -54,3 +54,21 @@ struct FavoritesDestination: View {
         }
     }
 }
+
+
+// TODO: Move where? Maybe Views folder?
+
+struct CategoryView: View {
+    let category: Category
+    var path: Binding<[Screen]>?
+    
+    var body: some View {
+        Text("Category View")
+    }
+}
+
+struct FavoritesView: View {
+    var body: some View {
+        Text("Favorites View")
+    }
+}
