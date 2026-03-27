@@ -6,11 +6,27 @@
 //
 
 import Testing
+import XCTest
+import Foundation
 
 struct VenueFinderTests {
+    
+    @Test func testDisplayTitle() {
+        let venue = Venue.preview
 
-    @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+        XCTAssertEqual(venue.displayTitle, "Sample Venue, Restaurant, 1.5 km away")
+    }
+    
+    @Test func testMappingFiltersMissingName() {
+        let apiModel = VenueApiModel(id: "",
+                                     name: nil,
+                                     distance: nil,
+                                     rating: nil,
+                                     timezone: nil,
+                                     category: nil,
+                                     location: nil)
+        
+        XCTAssertNil(apiModel.domainModel)
     }
 
 }

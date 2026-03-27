@@ -17,7 +17,7 @@ public struct Venue: DomainModel, Identifiable {
 
     // Business logic belongs here
     public var displayTitle: String {
-        "\(name), \(category), \(distance) km away"
+        "\(name), \(category.name), \(distance) km away"
     }
 }
 

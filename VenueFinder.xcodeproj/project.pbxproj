@@ -36,9 +36,32 @@
 		33AFED932F75883000C8B66B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3372410B2F76DF0E008A3CB0 /* Exceptions for "VenueFinder" folder in "VenueFinderTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Extensions/Venue+Previews.swift",
+				Models/Api/CategoryApiModel.swift,
+				Models/Api/IconApiModel.swift,
+				Models/Api/LocationApiModel.swift,
+				Models/Api/VenueApiModel.swift,
+				Models/Domain/Category.swift,
+				Models/Domain/Icon.swift,
+				Models/Domain/Location.swift,
+				Models/Domain/Venue.swift,
+				Models/Mapper.swift,
+				Models/ModelProtocol.swift,
+			);
+			target = 333309882F6461120007B093 /* VenueFinderTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3333097D2F6461100007B093 /* VenueFinder */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3372410B2F76DF0E008A3CB0 /* Exceptions for "VenueFinder" folder in "VenueFinderTests" target */,
+			);
 			path = VenueFinder;
 			sourceTree = "<group>";
 		};
