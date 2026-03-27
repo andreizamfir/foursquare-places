@@ -20,7 +20,7 @@ extension VenueDataSource {
             }
             
             let response = try JSONDecoder().decode(VenuesResponse.self, from: data)
-            return response.venues
+            return response.venues.compactMap { $0.domainModel }
         }
     }
 

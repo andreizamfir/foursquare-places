@@ -1,64 +1,101 @@
 {
     "venues": [
         {
+            "id": "1",
             "name": "The Golden Fork",
             "rating": 4,
             "distance": 1.2,
-            "category": { "id": "4d4b7105d754a06374d81259", "name": "Restaurant", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_", "suffix": ".png" } }
+            "timezone": "America/New_York",
+            "category": { "id": "4d4b7105d754a06374d81259", "name": "Restaurant", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_", "suffix": ".png" } },
+            "location": { "address": "123 Main St", "country": "United States", "locality": "New York", "postcode": "10001", "region": "NY" }
         },
         {
+            "id": "2",
             "name": "Brew & Barrel",
             "rating": 5,
             "distance": 0.8,
-            "category": { "id": "4bf58dd8d48988d116941735", "name": "Bar", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_", "suffix": ".png" } }
+            "timezone": "America/New_York",
+            "category": { "id": "4bf58dd8d48988d116941735", "name": "Bar", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_", "suffix": ".png" } },
+            "location": { "address": "456 Park Ave", "country": "United States", "locality": "New York", "postcode": "10002", "region": "NY" }
         },
         {
+            "id": "3",
             "name": "Zen Spa & Wellness",
             "rating": 4,
             "distance": 3.5,
-            "category": { "id": "4bf58dd8d48988d1ed941735", "name": "Spa", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/spa_", "suffix": ".png" } }
+            "timezone": "America/New_York",
+            "category": { "id": "4bf58dd8d48988d1ed941735", "name": "Spa", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/spa_", "suffix": ".png" } },
+            "location": { "address": "789 Madison Ave", "country": "United States", "locality": "New York", "postcode": "10003", "region": "NY" }
         },
         {
+            "id": "4",
             "name": "The Book Nook",
             "rating": 3,
             "distance": 2.1,
-            "category": { "id": "4bf58dd8d48988d114951735", "name": "Bookstore", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/bookstore_", "suffix": ".png" } }
+            "timezone": "America/New_York",
+            "category": { "id": "4bf58dd8d48988d114951735", "name": "Bookstore", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/bookstore_", "suffix": ".png" } },
+            "location": { "address": "321 5th Ave", "country": "United States", "locality": "New York", "postcode": "10004", "region": "NY" }
         },
         {
+            "id": "5",
             "name": "Urban Grind Coffee",
             "rating": 5,
             "distance": 0.4,
-            "category": { "id": "4bf58dd8d48988d1e0931735", "name": "Cafe", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_", "suffix": ".png" } }
+            "timezone": "America/New_York",
+            "category": { "id": "4bf58dd8d48988d1e0931735", "name": "Cafe", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_", "suffix": ".png" } },
+            "location": { "address": "654 Broadway", "country": "United States", "locality": "New York", "postcode": "10005", "region": "NY" }
         },
         {
+            "id": "6",
             "name": "FitZone Gym",
             "rating": 4,
             "distance": 1.9,
-            "category": { "id": "4bf58dd8d48988d175941735", "name": "Gym", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/gym_", "suffix": ".png" } }
+            "timezone": "America/New_York",
+            "category": { "id": "4bf58dd8d48988d175941735", "name": "Gym", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/gym_", "suffix": ".png" } },
+            "location": { "address": "987 Park Pl", "country": "United States", "locality": "New York", "postcode": "10006", "region": "NY" }
         },
         {
+            "id": "7",
             "name": "Sakura Japanese Kitchen",
             "rating": 5,
             "distance": 2.7,
-            "category": { "id": "4d4b7105d754a06374d81259", "name": "Restaurant", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_", "suffix": ".png" } }
+            "timezone": "America/New_York",
+            "category": { "id": "4d4b7105d754a06374d81259", "name": "Restaurant", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_", "suffix": ".png" } },
+            "location": { "address": "432 7th Ave", "country": "United States", "locality": "New York", "postcode": "10007", "region": "NY" }
         },
         {
+            "id": "8",
             "name": "The Grand Cinema",
             "rating": 3,
             "distance": 4.3,
-            "category": { "id": "4bf58dd8d48988d17f941735", "name": "Cinema", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/arts_entertainment/movietheater_", "suffix": ".png" } }
+            "timezone": "America/New_York",
+            "category": {
+                "id": "4bf58dd8d48988d17f941735",
+                "name": "Cinema",
+                "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/arts_entertainment/movietheater_",
+                    "suffix": ".png"
+                }
+            },
+            "location": { "address": "555 8th Ave", "country": "United States", "locality": "New York", "postcode": "10008", "region": "NY" }
         },
         {
+            "id": "9",
             "name": "Artisan Pizza Co.",
             "rating": 4,
             "distance": 1.1,
-            "category": { "id": "4d4b7105d754a06374d81259", "name": "Restaurant", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_", "suffix": ".png" } }
+            "timezone": "America/New_York",
+            "category": { "id": "4d4b7105d754a06374d81259", "name": "Restaurant", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_", "suffix": ".png" } },
+            "location": { "address": "111 W St", "country": "United States", "locality": "New York", "postcode": "10009", "region": "NY" }
         },
         {
+            "id": "10",
             "name": "Nightowl Lounge",
             "rating": 3,
             "distance": 5.0,
-            "category": { "id": "4bf58dd8d48988d116941735", "name": "Bar", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_", "suffix": ".png" } }
+            "timezone": "America/New_York",
+            "category": { "id": "4bf58dd8d48988d116941735", "name": "Bar", "icon": { "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_", "suffix": ".png" } },
+            "location": { "address": "222 E St", "country": "United States", "locality": "New York", "postcode": "10010", "region": "NY" }
         }
     ]
 }

@@ -22,5 +22,5 @@ public struct Venue: DomainModel, Identifiable {
 }
 
 struct VenuesResponse: Codable {
-    let venues: [Venue]
+    let venues: [VenueApiModel]
 }
