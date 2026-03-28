@@ -16,6 +16,7 @@ import Observation
         case failed(String)
     }
 
+    // Only the store can modify those values, other classes can only read them
     private(set) var venues: [Venue] = []
     private(set) var loadState: LoadState = .idle
 

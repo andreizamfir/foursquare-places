@@ -10,11 +10,13 @@ import SwiftUI
 @main
 struct VenueFinderApp: App {
     @State private var venuesStore = VenuesStore(dataSource: .live())
+    @State private var navigator = Navigator()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(venuesStore)
+                .environment(navigator)
         }
     }
 }
