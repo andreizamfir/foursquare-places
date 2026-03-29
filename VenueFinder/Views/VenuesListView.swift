@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct VenuesListView: View {
-    @Environment(VenuesStore.self) private var store
-
+    @Environment(Services.self) var services
+    
     var body: some View {
-        List {
+        let store = services.venuesStore
+        
+        return List {
             switch store.loadState {
             case .idle, .loading:
                 ProgressView()
@@ -50,5 +52,5 @@ struct VenueRow: View {
     NavigationStack {
         VenuesListView()
     }
-    .environment(VenuesStore(dataSource: .mock()))
+    .environment(Services.preview)
 }

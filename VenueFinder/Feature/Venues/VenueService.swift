@@ -6,13 +6,13 @@
 //
 import SwiftUI
 
-struct VenueDataSource {
+struct VenueService {
     var fetchVenues: () async throws -> [Venue]
 }
 
-extension VenueDataSource {
-    static func live() -> VenueDataSource {
-        VenueDataSource {
+extension VenueService {
+    static func live() -> VenueService {
+        VenueService {
             guard let url = Bundle.main.url(forResource: "venues", withExtension: "json"),
                   let data = try? Data(contentsOf: url)
             else {
@@ -24,8 +24,21 @@ extension VenueDataSource {
         }
     }
 
-    static func mock(_ venues: [Venue] = .previews) -> VenueDataSource {
-        VenueDataSource { venues }
+    static func mock(_ venues: [Venue] = .previews) -> VenueService {
+        VenueService {
+            try await Task.sleep(for: .milliseconds(500))
+            return venues
+        }
+    }
+    
+    static func preview(_ venues: [Venue] = .previews) -> VenueService {
+        VenueService { venues }
+    }
+    
+    static func unimplemented() -> VenueService {
+        VenueService {
+            fatalError("Data source not implemented")
+        }
     }
 }
 

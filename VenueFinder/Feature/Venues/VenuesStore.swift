@@ -20,16 +20,16 @@ import Observation
     private(set) var venues: [Venue] = []
     private(set) var loadState: LoadState = .idle
 
-    private let dataSource: VenueDataSource
+    private let service: VenueService
 
-    init(dataSource: VenueDataSource) {
-        self.dataSource = dataSource
+    nonisolated init(service: VenueService) {
+        self.service = service
     }
 
     func load() async {
         loadState = .loading
         do {
-            venues = try await dataSource.fetchVenues()
+            venues = try await service.fetchVenues()
             loadState = .loaded
         } catch {
             loadState = .failed(error.localizedDescription)
