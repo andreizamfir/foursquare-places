@@ -7,8 +7,16 @@
 
 struct LocationApiModel: ApiModel {
     var address: String?
+    var city: String?
+    var state: String?
     var country: String?
-    var locality: String?
     var postcode: String?
-    var region: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case address
+        case city
+        case state
+        case country
+        case postcode = "postal_code"
+    }
 }

@@ -11,22 +11,20 @@ extension VenueApiModel {
         // Validate required fields
         guard let name = name?.trimmingCharacters(in: .whitespaces),
               !name.isEmpty,
-              let distance = distance,
-              let rating = rating,
-              let timezone = timezone,
               let location = location?.domainModel,
-              let category = category?.domainModel else {
+              let categories = categories,
+              let rating = rating,
+              let distance = distance else {
             return nil
         }
         
         return Venue(
             id: UUID(uuidString: id) ?? UUID(),
             name: name,
-            distance: distance,
-            rating: rating,
-            timezone: timezone,
             location: location,
-            category: category
+            categories: categories.compactMap { $0.domainModel },
+            rating: rating,
+            distance: distance
         )
     }
 }
@@ -34,19 +32,19 @@ extension VenueApiModel {
 extension LocationApiModel {
     var domainModel: Location? {
         guard let address = address,
+              let city = city,
+              let state = state,
               let country = country,
-              let locality = locality,
-              let postcode = postcode,
-              let region = region else {
+              let postcode = postcode else {
             return nil
         }
         
         return Location(
             address: address,
+            city: city,
+            state: state,
             country: country,
-            locality: locality,
-            postcode: postcode,
-            region: region
+            postcode: postcode
         )
     }
 }

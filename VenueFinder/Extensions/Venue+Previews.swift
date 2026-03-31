@@ -20,9 +20,9 @@ extension Array where Element == Venue {
             icon: Icon(prefix: "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_", suffix: ".png")
         )
         return [
-            Venue(id: UUID(), name: "Brew & Barrel", distance: 0.8, rating: 5, timezone: "UTC+2", location: .preview, category: bar),
-            Venue(id: UUID(), name: "Zen Spa & Wellness", distance: 3.5, rating: 4, timezone: "UTC+2", location: .preview, category: restaurant),
-            Venue(id: UUID(), name: "The Golden Fork", distance: 1.2, rating: 4, timezone: "UTC+2", location: .preview, category: restaurant)
+            Venue(id: UUID(uuidString: "venue1")!, name: "Brew & Barrel", location: .preview, categories: [bar], rating: 5, distance: 800),
+            Venue(id: UUID(uuidString: "venue2")!, name: "Zen Spa & Wellness", location: .preview, categories: [restaurant], rating: 4, distance: 3500),
+            Venue(id: UUID(uuidString: "venue3")!, name: "The Golden Fork", location: .preview, categories: [restaurant], rating: 4, distance: 1200)
         ]
     }
 }
@@ -30,13 +30,12 @@ extension Array where Element == Venue {
 extension Venue {
     static var preview: Venue {
         Venue(
-            id: UUID(),
+            id: UUID(uuidString: "venue1")!,
             name: "Sample Venue",
-            distance: 1.5,
-            rating: 4.5,
-            timezone: "UTC",
             location: .preview,
-            category: .preview
+            categories: [.preview],
+            rating: 4.5,
+            distance: 1500
         )
     }
 }
@@ -45,10 +44,10 @@ extension Location {
     static var preview: Location {
         Location(
             address: "123 Main St",
+            city: "San Francisco",
+            state: "CA",
             country: "USA",
-            locality: "San Francisco",
-            postcode: "94105",
-            region: "CA"
+            postcode: "94105"
         )
     }
 }

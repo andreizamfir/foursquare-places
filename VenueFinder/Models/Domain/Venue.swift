@@ -9,18 +9,13 @@ import Foundation
 public struct Venue: DomainModel, Identifiable {
     public let id: UUID
     public let name: String
-    public let distance: Double
-    public let rating: Double
-    public let timezone: String
     public let location: Location
-    public let category: Category
+    public let categories: [Category]
+    public let rating: Double
+    public let distance: Int
 
     // Business logic belongs here
     public var displayTitle: String {
-        "\(name), \(category.name), \(distance) km away"
+        "\(name), \(distance) km away"
     }
-}
-
-struct VenuesResponse: Codable {
-    let venues: [VenueApiModel]
 }

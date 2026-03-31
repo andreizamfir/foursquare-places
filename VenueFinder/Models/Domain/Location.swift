@@ -7,8 +7,8 @@
 
 public struct Location: DomainModel {
     public let address: String
+    public let city: String
+    public let state: String
     public let country: String
-    public let locality: String
     public let postcode: String
-    public let region: String
 }

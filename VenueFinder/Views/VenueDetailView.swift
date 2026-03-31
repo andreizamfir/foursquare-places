@@ -19,8 +19,10 @@ struct VenueDetailView: View {
             .font(.largeTitle)
             .foregroundStyle(.foreground)
         
-        Text(venue.category.name)
-            .font(.headline)
-            .foregroundStyle(.secondary)
+        ForEach(venue.categories) { category in
+            Text(category.name)
+                .font(.headline)
+                .foregroundStyle(.secondary)
+        }
     }
 }

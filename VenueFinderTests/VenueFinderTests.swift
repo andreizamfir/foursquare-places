@@ -14,17 +14,16 @@ struct VenueFinderTests {
     @Test func testDisplayTitle() {
         let venue = Venue.preview
 
-        XCTAssertEqual(venue.displayTitle, "Sample Venue, Restaurant, 1.5 km away")
+        XCTAssertEqual(venue.displayTitle, "Sample Venue, 1.5 km away")
     }
     
     @Test func testMappingFiltersMissingName() {
         let apiModel = VenueApiModel(id: "",
                                      name: nil,
-                                     distance: nil,
+                                     location: nil,
+                                     categories: nil,
                                      rating: nil,
-                                     timezone: nil,
-                                     category: nil,
-                                     location: nil)
+                                     distance: nil)
         
         XCTAssertNil(apiModel.domainModel)
     }
