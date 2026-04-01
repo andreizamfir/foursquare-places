@@ -36,7 +36,7 @@ struct VenuesListView: View {
         }
         .navigationTitle("Venues")
         .task { await store.load() }
-        .refreshable { await store.load() }
+        .refreshable { await store.load(policy: .networkElseCache) }
     }
 }
 

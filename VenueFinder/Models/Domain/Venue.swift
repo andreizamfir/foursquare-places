@@ -19,3 +19,8 @@ public struct Venue: DomainModel, Identifiable {
         "\(name), \(distance) km away"
     }
 }
+
+extension Venue: Cacheable {
+    public var cacheId: String { id.uuidString }
+    public static var cacheIdentifier: String { "venues" }
+}

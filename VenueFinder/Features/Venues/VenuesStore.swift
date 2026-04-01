@@ -26,10 +26,10 @@ import Observation
         self.service = service
     }
 
-    func load() async {
+    func load(policy: CachePolicy = .cacheThenFetch) async {
         loadState = .loading
         do {
-            venues = try await service.fetchVenues()
+            venues = try await service.fetchVenues(policy)
             loadState = .loaded
         } catch {
             loadState = .failed(error.localizedDescription)
