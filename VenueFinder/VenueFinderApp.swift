@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct VenueFinderApp: App {
-    @State private var services = Services.live
+    @State private var services = Services.json
     @State private var navigator = Navigator()
 
     var body: some Scene {

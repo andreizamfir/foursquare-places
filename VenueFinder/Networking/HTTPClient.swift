@@ -34,19 +34,27 @@ enum HTTPError: Error, Sendable, LocalizedError {
 struct HTTPClient: Sendable {
     private var url: URL
     private var session: URLSession
-    private let apiVersion: String = "2025-06-17"
-    
-    init(baseURL: URL, session: URLSession = .shared) {
+    private let apiKey: String
+    private let apiVersion: String = "1970-01-01"
+
+    init(baseURL: URL, apiKey: String, session: URLSession = .shared) {
         self.url = baseURL
+        self.apiKey = apiKey
         self.session = session
     }
-    
+
     func fetch(_ url: URL) async throws -> Data {
         var request = URLRequest(url: url)
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue(apiVersion, forHTTPHeaderField: "X-Places-Api-Version")
-        
+        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
+
+        print("📡 Request URL: \(url)")
+        print("📡 Headers: Accept=application/json, X-Places-Api-Version=\(apiVersion)")
+
         do {
             let (data, response) = try await session.data(for: request)
+            print("📡 Response Status: \((response as? HTTPURLResponse)?.statusCode ?? -1)")
             try validateStatusCode(response)
             return data
         } catch let error as URLError {
@@ -61,8 +69,10 @@ struct HTTPClient: Sendable {
         request.httpMethod = "POST"
         request.httpBody = body
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue(apiVersion, forHTTPHeaderField: "X-Places-Api-Version")
-        
+        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
+
         do {
             let (data, response) = try await session.data(for: request)
             try validateStatusCode(response)
@@ -90,15 +100,15 @@ private func validateStatusCode(_ response: URLResponse) throws {
 // MARK: - Extensions
 
 extension HTTPClient {
-    static var live: HTTPClient {
-        HTTPClient(baseURL: URL(string: "https://places-api.foursquare.com")!)
+    static func live(apiKey: String) -> HTTPClient {
+        HTTPClient(baseURL: URL(string: "https://api.foursquare.com/v3")!, apiKey: apiKey)
     }
     
     static var mock: HTTPClient {
         let config = URLSessionConfiguration.ephemeral
         config.protocolClasses = [MockURLProtocol.self]
         let session = URLSession(configuration: config)
-        return HTTPClient(baseURL: URL(string: "https://api.example.com")!, session: session)
+        return HTTPClient(baseURL: URL(string: "https://api.example.com")!, apiKey: "mock-key", session: session)
     }
 }
 
@@ -109,6 +119,7 @@ extension HTTPClient {
         _ type: T.Type,
         from url: URL
     ) async throws -> T {
+        print("📡 Fetching from: \(url)")
         let data = try await fetch(url)
         
         // Try to decode as error first

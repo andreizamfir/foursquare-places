@@ -32,4 +32,8 @@ extension Services {
     static var preview: Services {
         Services(venuesStore: VenuesStore(service: .preview()))
     }
+    
+    static var json: Services {
+        Services(venuesStore: VenuesStore(service: .json()))
+    }
 }

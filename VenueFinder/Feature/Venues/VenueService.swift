@@ -12,18 +12,17 @@ struct VenueService {
 
 extension VenueService {
     
-    static func live() -> VenueService {
+    static func live(apiKey: String = "RSGW01XR1Y1CAYG04EM3BP1EM0TXGDGSMCF11AKMKYZSDPOR") -> VenueService {
         VenueService {
-            let client = HTTPClient.live
+            let client = HTTPClient.live(apiKey: apiKey)
             let response = try await client.decode(
                 VenuesApiResponse.self,
                 from: FoursquareEndpoints.searchPlaces(
                     latitude: 40.7,
-                    longitude: -74.0,
-                    apiKey: "YBIHEQ0WRUJSXKKDMTG3AAEZCPUQ502S1KOHFN5YL10T2DNB"
+                    longitude: -74.0
                 )
             )
-            
+
             return response.venues.compactMap { $0.domainModel }
         }
     }
@@ -45,18 +44,18 @@ extension VenueService {
         }
     }
     
-//    static func json() -> VenueService {
-//        VenueService {
-//            guard let url = Bundle.main.url(forResource: "venues", withExtension: "json"),
-//                  let data = try? Data(contentsOf: url)
-//            else {
-//                throw VenueDataSourceError.bundleResourceNotFound("venues.json")
-//            }
-//
-//            let response = try JSONDecoder().decode(VenuesResponse.self, from: data)
-//            return response.venues.compactMap { $0.domainModel }
-//        }
-//    }
+    static func json() -> VenueService {
+        VenueService {
+            guard let url = Bundle.main.url(forResource: "venues", withExtension: "json"),
+                  let data = try? Data(contentsOf: url)
+            else {
+                throw VenueDataSourceError.bundleResourceNotFound("venues.json")
+            }
+
+            let response = try JSONDecoder().decode(VenuesApiResponse.self, from: data)
+            return response.venues.compactMap { $0.domainModel }
+        }
+    }
 }
 
 enum VenueDataSourceError: Error, LocalizedError {
